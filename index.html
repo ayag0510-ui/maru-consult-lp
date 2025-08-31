@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>初心者向けコンサル｜リピートせどり6か月集中プログラム（3名まで）</title>
+  <meta name="description" content="楽天メインの電脳リピート。6か月で月利30万円を狙う少人数伴走プログラム。初回は3名まで。初期メンは半額特典あり。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#0a1e36; --muted:#4b6b88; --line:#d9ecfb; --card:#ffffff;
+      --brand:#1b76d1; --brand2:#4fd1ff; --accent:#a78bfa; --accent2:#f472b6;
+      --bg1:#eaf6ff; --bg2:#f7fbff; --shadow:0 14px 48px rgba(12,72,140,.14)
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;scroll-behavior:smooth;background:linear-gradient(180deg,var(--bg1) 0%,var(--bg2) 100%);color:var(--ink);font-family:"Noto Sans JP",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;letter-spacing:.02em}
+    a{color:var(--brand);text-decoration:none}
+    .wrap{max-width:1140px;margin:0 auto;padding:20px}
+
+    /* Topbar */
+    .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:saturate(140%) blur(8px);border-bottom:1px solid var(--line)}
+    .topbar-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:10px 20px}
+    .brand{font-weight:900;letter-spacing:.02em}
+    .top-cta{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:12px;border:1px solid #bfe6ff;background:linear-gradient(180deg,#e9f6ff,#d9f0ff);color:#0a2b55;font-weight:800}
+
+    /* Hero */
+    .hero{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:28px;background:var(--card);padding:34px;box-shadow:var(--shadow)}
+    .bg-orb{position:absolute;inset:-10% -20% auto auto;width:70%;height:120%;background:radial-gradient(600px 380px at 80% 10%,rgba(79,209,255,.35),transparent 60%),radial-gradient(520px 340px at 20% 0%,rgba(167,139,250,.25),transparent 60%),radial-gradient(560px 360px at 95% 35%,rgba(244,114,182,.25),transparent 60%);filter:blur(10px);pointer-events:none}
+    .ribbon{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,#e8f6ff,#cfeeff);color:#0b305a;padding:8px 14px;border-radius:999px;font-weight:900;border:1px solid #bfe6ff}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:24px;align-items:center}
+    h1{font-size:clamp(30px,5vw,50px);line-height:1.12;margin:12px 0}
+    .sub{font-size:18px;color:var(--muted);margin:0 0 10px}
+    .hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 18px;border-radius:14px;border:1px solid #bfe6ff;background:linear-gradient(180deg,#e9f6ff,#d9f0ff);color:#0a2b55;font-weight:900}
+    .btn-primary{background:linear-gradient(90deg,var(--brand),var(--brand2));border-color:#62d6ff;color:#fff;box-shadow:0 10px 30px rgba(27,118,209,.25)}
+    .hero-visual{position:relative}
+    .img-stack{display:grid;gap:12px}
+    .img-stack img{width:100%;border-radius:18px;border:1px solid var(--line);box-shadow:0 10px 30px rgba(14,60,110,.18);object-fit:cover}
+    .trust{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .chip{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:6px 10px;border:1px solid #cbe8ff;background:#f3faff;color:#214667;font-size:12px}
+
+    /* Sections */
+    .section{margin-top:28px}
+    .card{border:1px solid var(--line);border-radius:20px;background:var(--card);padding:20px;box-shadow:0 8px 24px rgba(10,60,110,.06)}
+    h2{font-size:26px;margin:0 0 12px}
+    h3{font-size:18px;margin:0 0 8px}
+    p{margin:6px 0}
+    ul{margin:8px 0 0 18px}
+    li{margin:6px 0}
+    .grid{display:grid;gap:18px}
+    .cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    @media (max-width:960px){.hero-grid{grid-template-columns:1fr}.cols-3,.cols-2{grid-template-columns:1fr}}
+
+    /* Feature icons */
+    .feat{display:flex;gap:12px}
+    .icon{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,#e0f6ff,#cfe6ff);display:grid;place-items:center;border:1px solid #c9e6ff}
+
+    /* Pricing */
+    .price-card{position:relative}
+    .strk{color:#6e8aa6;text-decoration:line-through;font-weight:800}
+    .now{font-size:40px;font-weight:900;background:linear-gradient(90deg,var(--brand),var(--brand2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .unit{font-size:14px;color:#3e5f86}
+    .badge-note{position:absolute;top:12px;right:12px;background:linear-gradient(90deg,#eaf7ff,#d4f0ff);border:1px solid #bfe6ff;color:#0a2b55;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800}
+
+    /* Flow */
+    .flow{counter-reset:item}
+    .flow li{list-style:none;position:relative;padding-left:40px;margin:10px 0}
+    .flow li:before{counter-increment:item;content:counter(item);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:999px;display:grid;place-items:center;background:linear-gradient(135deg,#dff3ff,#cfe7ff);border:1px solid #c6e4ff;color:#103e6e;font-weight:900}
+
+    /* Sticky CTA bottom */
+    .sticky-cta{position:sticky;bottom:8px;margin-top:24px}
+    .sticky-inner{display:flex;gap:14px;justify-content:space-between;align-items:center;border:1px solid var(--line);border-radius:16px;background:linear-gradient(90deg,rgba(233,246,255,.9),rgba(217,240,255,.9));backdrop-filter:saturate(140%) blur(6px);padding:10px 14px;box-shadow:var(--shadow)}
+    .sticky-price{display:flex;gap:10px;align-items:baseline}
+    .sticky-old{color:#6e8aa6;text-decoration:line-through;font-weight:800}
+    .sticky-now{font-size:24px;font-weight:900;color:#0a4b87}
+
+    .note{font-size:13px;color:var(--muted)}
+    footer{margin:30px 0 10px;font-size:12px;color:#6e8aa6;text-align:center}
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">まるのリピートせどりコンサル</div>
+      <a class="top-cta" href="https://utage-system.com/line/open/RAJnPKQnK0Re" target="_blank" rel="noopener">応募相談する</a>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <section class="hero">
+      <div class="bg-orb"></div>
+      <span class="ribbon">初期メンバー半額｜先着3名</span>
+      <div class="hero-grid">
+        <div>
+          <h1>初心者向けコンサル<br>リピートせどり6か月集中プログラム</h1>
+          <p class="sub">楽天メインの電脳×リピートで、<b>6か月で月利30万円</b>へ。少人数の<b>個別伴走</b>で“再現性のある仕入れ判断と仕組み化”を身につける。</p>
+          <div class="trust">
+            <span class="chip">個別伴走</span>
+            <span class="chip">質問し放題（24h以内）</span>
+            <span class="chip">日報・月報フィードバック</span>
+            <span class="chip">シート＆テンプレ配布</span>
+          </div>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="https://utage-system.com/line/open/RAJnPKQnK0Re" target="_blank" rel="noopener">LINEで応募相談</a>
+            <a class="btn" href="#price">料金を見る</a>
+            <a class="btn" href="#flow">参加の流れ</a>
+          </div>
+          <p class="note" style="margin-top:8px">※ 募集は枠が埋まり次第終了します。</p>
+        </div>
+        <div class="hero-visual">
+          <div class="img-stack">
+            <!-- ▼ 画像プレースホルダ（GitHub Pagesでも必ず表示されます）。
+                 差し替える場合は、リポジトリに assets/maru-hero-1.png / maru-hero-2.png を置き、
+                 src を "assets/maru-hero-1.png" などに変更してください。 -->
+            <img alt="ダッシュボードのプレビュー" loading="lazy"
+                 src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'><defs><linearGradient id='g' x1='0' x2='1'><stop stop-color='%23bde3ff'/><stop offset='1' stop-color='%23e7f5ff'/></linearGradient></defs><rect width='100%' height='100%' fill='url(%23g)'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%230a2b55' font-size='42' font-family='sans-serif'>Dashboard Preview</text></svg>"/>
+            <img alt="分析グラフのプレビュー" loading="lazy"
+                 src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='800'><defs><linearGradient id='g2' x1='0' x2='1'><stop stop-color='%23e0d7ff'/><stop offset='1' stop-color='%23ffe1f1'/></linearGradient></defs><rect width='100%' height='100%' fill='url(%23g2)'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' fill='%233b2a6f' font-size='40' font-family='sans-serif'>Analytics Preview</text></svg>"/>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section grid cols-3">
+      <div class="card feat">
+        <div class="icon">📈</div>
+        <div>
+          <h3>成果を数字で“見える化”</h3><p>日報・月報で進捗を数値管理し、迷わず成果につなげる。</p>
+        </div>
+      </div>
+      <div class="card feat">
+        <div class="icon">🧭</div>
+        <div>
+          <h3>判断基準を言語化</h3><p>「なぜ買うのか」を落とし込み、リピート拡大を加速。</p>
+        </div>
+      </div>
+      <div class="card feat">
+        <div class="icon">⚙️</div>
+        <div>
+          <h3>仕組み化の実践</h3><p>成果が出たら、リサーチ・納品などを外注化し、継続運用できる土台を整備。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section grid cols-3">
+      <div class="card">
+        <h2>対象</h2>
+        <ul>
+          <li>完全初心者～月利10万円以下</li>
+          <li>PCで作業できる方</li>
+          <li>1日2～3時間以上を確保できる方</li>
+          <li>運転資金100万円以上を用意できる方</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>期間とサポート</h2>
+        <ul>
+          <li>サポート期間：6か月</li>
+          <li>月2回Zoom</li>
+          <li>質問し放題（原則24h以内に返信）</li>
+          <li>日報・月報フィードバック</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2>内容（カリキュラム）</h2>
+        <ul>
+          <li>楽天メインの電脳せどり</li>
+          <li>リピートせどりの全体設計</li>
+          <li>仕入れ判断</li>
+          <li>仕組み化</li>
+          <li>仕入管理シートの配布</li>
+          <li>利用ツールの伝授（例：Keepa 等）</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section grid cols-2">
+      <div class="card price-card" id="price">
+        <span class="badge-note">初期メンバー半額</span>
+        <h2>料金</h2>
+        <p><span class="strk">300,000円</span> → <span class="now">150,000円</span> <span class="unit">／6か月（前払い）</span></p>
+        <ul>
+          <li>受講開始後の返金はありません</li>
+          <li>延長措置あり（条件達成時）</li>
+        </ul>
+        <div class="divider"></div>
+        
+        <div class="hero-ctas" style="margin-top:8px">
+          <a class="btn btn-primary" href="https://utage-system.com/line/open/RAJnPKQnK0Re" target="_blank" rel="noopener">LINEで応募相談</a>
+          <a class="btn" href="#flow">参加の流れ</a>
+        </div>
+      </div>
+      <div class="card">
+        <h2>向いている人 / 向いていない人</h2>
+        <h3>向いている人</h3>
+        <ul>
+          <li>素直に試し、改善のPDCAを回せる</li>
+          <li>毎日の小さな積み上げを継続できる</li>
+          <li>数字で管理し、記録を残せる</li>
+        </ul>
+        <h3 style="margin-top:10px">向いていない人</h3>
+        <ul>
+          <li>規約違反やグレーな手法を求める</li>
+          <li>記録や日報提出を避けたい</li>
+          <li>ショートカット最優先で再現性を軽視する</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section card" id="flow">
+      <h2>参加の流れ（フォロワー向け勉強会 → 告知 → 個別連絡）</h2>
+      <ol class="flow">
+        <li><b>フォロワー向け勉強会</b>を開催（リサーチ基礎＆再現性のコアを解説）。</li>
+        <li>勉強会の最後に<b>コンサル開始の告知</b>を行い、<b>気になる方は公式LINEへ</b>ご連絡いただきます。</li>
+        <li>公式LINEでのメッセージ受付後、<b>個別に詳細をご案内</b>（口頭で料金説明を含む）。</li>
+        <li>必要に応じて<b>書類確認 → Zoom面談</b>を実施し、合否をご連絡します。</li>
+        <li>合格後、キックオフ（環境整備・初回課題）→ 伴走スタート。</li>
+      </ol>
+      <div class="hero-ctas" style="margin-top:8px">
+        <a class="btn btn-primary" href="https://utage-system.com/line/open/RAJnPKQnK0Re" target="_blank" rel="noopener">LINEで応募相談</a>
+        <a class="btn" href="#faq">よくある質問</a>
+      </div>
+    </section>
+
+    <section class="section grid cols-2" id="apply">
+      <div class="card">
+        <h2>募集・選考</h2>
+        <ul>
+          <li>募集枠：<b>最大3名</b></li>
+          <li>審査制：書類 → Zoom面談</li>
+          <li>選考基準：時間確保・資金・意欲・規約順守</li>
+        </ul>
+        <div class="divider"></div>
+        <h3>応募方法</h3>
+        <ol class="flow">
+          <li>公式LINEで「面談」と送信してください。</li>
+          <li>自動返信でアンケートURLが届きます。</li>
+          <li>アンケートに回答いただいた方から、日程調整を行いZoom面談を実施します。</li>
+          <li>応募多数の場合は、アンケート内容・面談結果により選考します。</li>
+        </ol>
+        <div class="hero-ctas" style="margin-top:8px">
+          <a class="btn btn-primary" href="https://utage-system.com/line/open/RAJnPKQnK0Re" target="_blank" rel="noopener">公式LINEで連絡する</a>
+          
+        </div>
+        <p class="note" style="margin-top:8px">※ 応募枠に達し次第、締切となります。</p>
+      </div>
+      <div class="card" id="faq">
+        <h2>よくある質問（FAQ）</h2>
+        <h3>本業が忙しくても大丈夫？</h3>
+        <p class="note">1日2-3時間以上の時間確保ができれば大丈夫です。僕も副業なので、時間の捻出から一緒に考えましょう！</p>
+        <h3>完全初心者でも大丈夫ですか？</h3>
+        <p class="note">大丈夫です！初回に環境構築やリサーチ基準を一緒に整えるので、ゼロから始めても安心して取り組めます。</p>
+        <h3>パソコンが得意ではありません。ついていけますか？</h3>
+        <p class="note">Zoomでの画面共有や動画マニュアルをご用意しています。分からない操作はサポートしますのでご安心ください。</p>
+        <h3>他の副業と並行してできますか？</h3>
+        <p class="note">可能です。ただし「毎日2〜3時間の確保」が前提となります。並行する場合は優先順位の整理を一緒に行います。</p>
+      </div>
+    </section>
+
+    <section class="section card" id="policy">
+      <h2>ポリシー（法令・規約順守 / 守秘義務）</h2>
+      <ul>
+        <li>Amazon規約・各ブランド方針の順守</li>
+        <li>教材・ノウハウ・シートの無断共有・再配布の禁止</li>
+        <li>受講者の個人情報を適切に管理します</li>
+        <li>規約違反や著しい未提出・迷惑行為はサポート停止・契約解除の対象</li>
+      </ul>
+      <p class="note">講師：まる（X：<a href="https://x.com/maru_fufu_m" target="_blank" rel="noopener">@maru_fufu_m</a>）</p>
+    </section>
+
+    <div class="sticky-cta">
+      <div class="sticky-inner">
+        <div class="sticky-price">
+          <span class="sticky-old">300,000円</span>
+          <span class="sticky-now">150,000円</span>
+          <span class="unit">／6か月（前払い）</span>
+        </div>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="https://utage-system.com/line/open/RAJnPKQnK0Re" target="_blank" rel="noopener">LINEで応募相談</a>
+          <a class="btn" href="#price">料金詳細</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 まる｜リピートせどり コンサル</p>
+      <p class="note">本ページの内容は更新される場合があります。最新は勉強会・面談時のご案内をご確認ください。</p>
+    </footer>
+  </div>
+<script>
+// 内部リンクのスムーススクロール（GitHub Pagesでも動作）
+document.addEventListener('click', function(e){
+  const a = e.target.closest('a[href^="#"]');
+  if(!a) return;
+  const id = a.getAttribute('href').slice(1);
+  if(!id) return;
+  const el = document.getElementById(id);
+  if(el){
+    e.preventDefault();
+    el.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+});
+</script>
+</body>
+</html>
