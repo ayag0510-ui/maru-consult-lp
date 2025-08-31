@@ -79,6 +79,15 @@
 
     .note{font-size:13px;color:var(--muted)}
     footer{margin:30px 0 10px;font-size:12px;color:#6e8aa6;text-align:center}
+  /* ===== Responsive polish & hero-image tuning ===== */
+    .hero-visual{display:grid;place-items:center}
+    .img-stack{display:flex;flex-direction:column;gap:12px;align-items:center}
+    .img-stack img{width:clamp(220px,34vw,360px);height:auto;border-radius:18px;border:1px solid var(--line);box-shadow:0 8px 26px rgba(14,60,110,.12);object-fit:contain;background:linear-gradient(180deg,#f5fbff,#eef6ff)}
+    @media (max-width:960px){
+      .hero-grid{grid-template-columns:1fr}
+      .hero-visual{order:2;margin-top:8px}
+      .hero-ctas{justify-content:flex-start}
+    }
   </style>
 </head>
 <body>
@@ -205,13 +214,13 @@
     </section>
 
     <section class="section card" id="flow">
-      <h2>参加の流れ（フォロワー向け勉強会 → 告知 → 個別連絡）</h2>
+      <h2>参加の流れ（公式LINE → アンケート → 面談 → スタート）</h2>
       <ol class="flow">
-        <li><b>フォロワー向け勉強会</b>を開催（リサーチ基礎＆再現性のコアを解説）。</li>
-        <li>勉強会の最後に<b>コンサル開始の告知</b>を行い、<b>気になる方は公式LINEへ</b>ご連絡いただきます。</li>
-        <li>公式LINEでのメッセージ受付後、<b>個別に詳細をご案内</b>（口頭で料金説明を含む）。</li>
-        <li>必要に応じて<b>書類確認 → Zoom面談</b>を実施し、合否をご連絡します。</li>
-        <li>合格後、キックオフ（環境整備・初回課題）→ 伴走スタート。</li>
+        <li><b>公式LINEに「面談」と送信</b><br>ご希望の方は、まず公式LINEで「面談」とメッセージを送ってください。</li>
+        <li><b>アンケートに回答</b><br>自動返信でアンケートフォームが届きますので、ご入力をお願いします。</li>
+        <li><b>Zoom面談</b><br>アンケート回答者に、個別に日程調整を行い、Zoomで面談を実施します。この場でコンサルの詳細説明やご相談を行います。</li>
+        <li><b>受講のご判断</b><br>面談の際でも、後日でも構いません。「受けたい」と思われたタイミングでコンサルを開始できます。</li>
+        <li><b>スタート</b><br>初回説明や課題を共有し、伴走を開始します。</li>
       </ol>
       <div class="hero-ctas" style="margin-top:8px">
         <a class="btn btn-primary" href="https://utage-system.com/line/open/RAJnPKQnK0Re" target="_blank" rel="noopener">LINEで応募相談</a>
@@ -219,38 +228,19 @@
       </div>
     </section>
 
-    <section class="section grid cols-2" id="apply">
+    <section class="section" id="apply">
       <div class="card">
         <h2>募集・選考</h2>
         <ul>
           <li>募集枠：<b>最大3名</b></li>
-          <li>審査制：書類 → Zoom面談</li>
-          <li>選考基準：時間確保・資金・意欲・規約順守</li>
+          <li>応募条件：時間確保・資金・意欲など</li>
+          <li>選考方法：書類 → Zoom面談</li>
+          <li>選考基準：アンケート内容、面談の様子</li>
         </ul>
-        <div class="divider"></div>
-        <h3>応募方法</h3>
-        <ol class="flow">
-          <li>公式LINEで「面談」と送信してください。</li>
-          <li>自動返信でアンケートURLが届きます。</li>
-          <li>アンケートに回答いただいた方から、日程調整を行いZoom面談を実施します。</li>
-          <li>応募多数の場合は、アンケート内容・面談結果により選考します。</li>
-        </ol>
-        <div class="hero-ctas" style="margin-top:8px">
-          <a class="btn btn-primary" href="https://utage-system.com/line/open/RAJnPKQnK0Re" target="_blank" rel="noopener">公式LINEで連絡する</a>
-          
-        </div>
-        <p class="note" style="margin-top:8px">※ 応募枠に達し次第、締切となります。</p>
       </div>
-      <div class="card" id="faq">
-        <h2>よくある質問（FAQ）</h2>
-        <h3>本業が忙しくても大丈夫？</h3>
-        <p class="note">1日2-3時間以上の時間確保ができれば大丈夫です。僕も副業なので、時間の捻出から一緒に考えましょう！</p>
-        <h3>完全初心者でも大丈夫ですか？</h3>
-        <p class="note">大丈夫です！初回に環境構築やリサーチ基準を一緒に整えるので、ゼロから始めても安心して取り組めます。</p>
-        <h3>パソコンが得意ではありません。ついていけますか？</h3>
-        <p class="note">Zoomでの画面共有や動画マニュアルをご用意しています。分からない操作はサポートしますのでご安心ください。</p>
-        <h3>他の副業と並行してできますか？</h3>
-        <p class="note">可能です。ただし「毎日2〜3時間の確保」が前提となります。並行する場合は優先順位の整理を一緒に行います。</p>
+      <div class="hero-ctas" style="margin-top:12px">
+        <a class="btn btn-primary" href="https://utage-system.com/line/open/RAJnPKQnK0Re" target="_blank" rel="noopener">公式LINEで連絡する</a>
+        <a class="btn" href="#flow">参加の流れを見る</a>
       </div>
     </section>
 
