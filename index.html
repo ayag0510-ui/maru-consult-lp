@@ -1,3 +1,12 @@
+了解！ご要望どおりに修正しました。
+
+* 最下段の金額バー（sticky-cta）の追従を停止（`position: static`）
+* 3カラムの順序を「内容（カリキュラム） → 期間とサポート → 対象」に変更
+* 「参加の流れ」「募集・選考」セクションを削除（それへのリンクも削除）
+
+そのまま差し替えてお使いください👇
+
+```html
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -65,13 +74,13 @@
     .unit{font-size:14px;color:#3e5f86}
     .badge-note{position:absolute;top:12px;right:12px;background:linear-gradient(90deg,#eaf7ff,#d4f0ff);border:1px solid #bfe6ff;color:#0a2b55;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:800}
 
-    /* Flow */
+    /* (kept for compatibility; not used now) */
     .flow{counter-reset:item}
     .flow li{list-style:none;position:relative;padding-left:40px;margin:10px 0}
     .flow li:before{counter-increment:item;content:counter(item);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:999px;display:grid;place-items:center;background:linear-gradient(135deg,#dff3ff,#cfe7ff);border:1px solid #c6e4ff;color:#103e6e;font-weight:900}
 
-    /* Sticky CTA bottom */
-    .sticky-cta{position:sticky;bottom:8px;margin-top:24px}
+    /* Bottom price bar (no sticky) */
+    .sticky-cta{position:static; margin-top:24px} /* ← 追従を停止 */
     .sticky-inner{display:flex;gap:14px;justify-content:space-between;align-items:center;border:1px solid var(--line);border-radius:16px;background:linear-gradient(90deg,rgba(233,246,255,.9),rgba(217,240,255,.9));backdrop-filter:saturate(140%) blur(6px);padding:10px 14px;box-shadow:var(--shadow)}
     .sticky-price{display:flex;gap:10px;align-items:baseline}
     .sticky-old{color:#6e8aa6;text-decoration:line-through;font-weight:800}
@@ -79,7 +88,8 @@
 
     .note{font-size:13px;color:var(--muted)}
     footer{margin:30px 0 10px;font-size:12px;color:#6e8aa6;text-align:center}
-  /* ===== Responsive polish & hero-image tuning ===== */
+
+    /* ===== Responsive polish & hero-image tuning ===== */
     .hero-visual{display:grid;place-items:center}
     .img-stack{display:flex;flex-direction:column;gap:12px;align-items:center}
     .img-stack img{width:clamp(220px,34vw,360px);height:auto;border-radius:18px;border:1px solid var(--line);box-shadow:0 8px 26px rgba(14,60,110,.12);object-fit:contain;background:linear-gradient(180deg,#f5fbff,#eef6ff)}
@@ -115,7 +125,6 @@
           <div class="hero-ctas">
             <a class="btn btn-primary" href="https://utage-system.com/line/open/RAJnPKQnK0Re" target="_blank" rel="noopener">LINEで応募相談</a>
             <a class="btn" href="#price">料金を見る</a>
-            <a class="btn" href="#flow">参加の流れ</a>
           </div>
           <p class="note" style="margin-top:8px">※ 募集は枠が埋まり次第終了します。</p>
         </div>
@@ -148,14 +157,17 @@
       </div>
     </section>
 
+    <!-- ▼▼ 順序変更：内容 → 期間とサポート → 対象 ▼▼ -->
     <section class="section grid cols-3">
       <div class="card">
-        <h2>対象</h2>
+        <h2>内容（カリキュラム）</h2>
         <ul>
-          <li>完全初心者～月利10万円以下</li>
-          <li>PCで作業できる方</li>
-          <li>1日2～3時間以上を確保できる方</li>
-          <li>運転資金100万円以上を用意できる方</li>
+          <li>楽天メインの電脳せどり</li>
+          <li>リピートせどりの全体設計</li>
+          <li>仕入れ判断</li>
+          <li>仕組み化</li>
+          <li>仕入管理シートの配布</li>
+          <li>利用ツールの伝授（例：Keepa 等）</li>
         </ul>
       </div>
       <div class="card">
@@ -168,17 +180,16 @@
         </ul>
       </div>
       <div class="card">
-        <h2>内容（カリキュラム）</h2>
+        <h2>対象</h2>
         <ul>
-          <li>楽天メインの電脳せどり</li>
-          <li>リピートせどりの全体設計</li>
-          <li>仕入れ判断</li>
-          <li>仕組み化</li>
-          <li>仕入管理シートの配布</li>
-          <li>利用ツールの伝授（例：Keepa 等）</li>
+          <li>完全初心者～月利10万円以下</li>
+          <li>PCで作業できる方</li>
+          <li>1日2～3時間以上を確保できる方</li>
+          <li>運転資金100万円以上を用意できる方</li>
         </ul>
       </div>
     </section>
+    <!-- ▲▲ 順序変更ここまで ▲▲ -->
 
     <section class="section grid cols-2">
       <div class="card price-card" id="price">
@@ -190,10 +201,8 @@
           <li>延長措置あり（条件達成時）</li>
         </ul>
         <div class="divider"></div>
-        
         <div class="hero-ctas" style="margin-top:8px">
           <a class="btn btn-primary" href="https://utage-system.com/line/open/RAJnPKQnK0Re" target="_blank" rel="noopener">LINEで応募相談</a>
-          <a class="btn" href="#flow">参加の流れ</a>
         </div>
       </div>
       <div class="card">
@@ -213,36 +222,8 @@
       </div>
     </section>
 
-    <section class="section card" id="flow">
-      <h2>参加の流れ（公式LINE → アンケート → 面談 → スタート）</h2>
-      <ol class="flow">
-        <li><b>公式LINEに「面談」と送信</b><br>ご希望の方は、まず公式LINEで「面談」とメッセージを送ってください。</li>
-        <li><b>アンケートに回答</b><br>自動返信でアンケートフォームが届きますので、ご入力をお願いします。</li>
-        <li><b>Zoom面談</b><br>アンケート回答者に、個別に日程調整を行い、Zoomで面談を実施します。この場でコンサルの詳細説明やご相談を行います。</li>
-        <li><b>受講のご判断</b><br>面談の際でも、後日でも構いません。「受けたい」と思われたタイミングでコンサルを開始できます。</li>
-        <li><b>スタート</b><br>初回説明や課題を共有し、伴走を開始します。</li>
-      </ol>
-      <div class="hero-ctas" style="margin-top:8px">
-        <a class="btn btn-primary" href="https://utage-system.com/line/open/RAJnPKQnK0Re" target="_blank" rel="noopener">LINEで応募相談</a>
-        <a class="btn" href="#faq">よくある質問</a>
-      </div>
-    </section>
-
-    <section class="section" id="apply">
-      <div class="card">
-        <h2>募集・選考</h2>
-        <ul>
-          <li>募集枠：<b>最大3名</b></li>
-          <li>応募条件：時間確保・資金・意欲など</li>
-          <li>選考方法：書類 → Zoom面談</li>
-          <li>選考基準：アンケート内容、面談の様子</li>
-        </ul>
-      </div>
-      <div class="hero-ctas" style="margin-top:12px">
-        <a class="btn btn-primary" href="https://utage-system.com/line/open/RAJnPKQnK0Re" target="_blank" rel="noopener">公式LINEで連絡する</a>
-        <a class="btn" href="#flow">参加の流れを見る</a>
-      </div>
-    </section>
+    <!-- 参加の流れ（削除） -->
+    <!-- 募集・選考（削除） -->
 
     <section class="section card" id="policy">
       <h2>ポリシー（法令・規約順守 / 守秘義務）</h2>
@@ -275,7 +256,6 @@
     </footer>
   </div>
 <script>
-// 内部リンクのスムーススクロール（GitHub Pagesでも動作）
 document.addEventListener('click', function(e){
   const a = e.target.closest('a[href^="#"]');
   if(!a) return;
@@ -290,3 +270,6 @@ document.addEventListener('click', function(e){
 </script>
 </body>
 </html>
+```
+
+他にも微調整したいところ（例えばボトムのバー自体を完全に外す/デザイン変更など）があれば、そのまま指示ください。すぐ反映します！
