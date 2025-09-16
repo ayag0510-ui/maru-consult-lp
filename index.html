@@ -244,27 +244,23 @@
     <footer>
       <p>© 2025 まる｜リピートせどり コンサル</p>
       <p class="note">本ページの内容は更新される場合があります。最新は勉強会・面談時のご案内をご確認ください。</p>
+      <p><a href="./tokushoho.html">特定商取引法に基づく表記</a></p> <!-- ← これを追加 -->
     </footer>
   </div>
-<script>
-document.addEventListener('click', function(e){
-  const a = e.target.closest('a[href^="#"]');
-  if(!a) return;
-  const id = a.getAttribute('href').slice(1);
-  if(!id) return;
-  const el = document.getElementById(id);
-  if(el){
-    e.preventDefault();
-    el.scrollIntoView({behavior:'smooth', block:'start'});
-  }
-  
-});
-</script>
+
+  <script>
+  document.addEventListener('click', function(e){
+    const a = e.target.closest('a[href^="#"]');
+    if(!a) return;
+    const id = a.getAttribute('href').slice(1);
+    if(!id) return;
+    const el = document.getElementById(id);
+    if(el){
+      e.preventDefault();
+      el.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  });
+  </script>
 </body>
 </html>
 
-<footer>
-  <p>© 2025 まる｜リピートせどり コンサル</p>
-  <p class="note">本ページの内容は更新される場合があります。最新は勉強会・面談時のご案内をご確認ください。</p>
-  <p><a href="./tokushoho.html">特定商取引法に基づく表記</a></p> <!-- ← これを追加 -->
-</footer>
