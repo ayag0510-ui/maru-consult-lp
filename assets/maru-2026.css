@@ -118,20 +118,33 @@ a{text-decoration:none;color:inherit}
   overflow: hidden;
 }
 
-.hero-character{
-  position: absolute;
-  left: -40px;        /* 画面外に半分逃がす */
-  bottom: -60px;      /* 下に沈める */
-  width: 90px;        /* ← 小さくする */
-  opacity: 0.25;      /* ← 気配レベル */
-  filter: blur(0.3px);
-  pointer-events: none;
-  z-index: 0;
+/* hero レイアウト */
+.hero-grid{
+  display: grid;
+  grid-template-columns: 1fr 280px; /* 右を細く */
+  align-items: center;
+  gap: 40px;
 }
 
-/* スマホでは完全に消す */
+/* 右側 */
+.hero-visual{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* キャラクター（控えめ） */
+.hero-character{
+  width: 140px;        /* ← ここでサイズ調整 */
+  opacity: 0.35;       /* 主張を抑える */
+}
+
+/* スマホでは非表示 */
 @media(max-width: 768px){
-  .hero-character{
+  .hero-grid{
+    grid-template-columns: 1fr;
+  }
+  .hero-visual{
     display: none;
   }
 }
