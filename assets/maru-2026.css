@@ -112,25 +112,26 @@ a{text-decoration:none;color:inherit}
   padding:30px 0;color:var(--muted);font-size:14px
 }
 
-/* character */
+/* character（控えめ） */
 .hero{
-  position:relative;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-character{
-  position:absolute;
-  right:40px;
-  bottom:-20px;
-  width:120px;
-  opacity:0.85;
-  pointer-events:none;
+  position: absolute;
+  left: -40px;        /* 画面外に半分逃がす */
+  bottom: -60px;      /* 下に沈める */
+  width: 90px;        /* ← 小さくする */
+  opacity: 0.25;      /* ← 気配レベル */
+  filter: blur(0.3px);
+  pointer-events: none;
+  z-index: 0;
 }
 
-@media(max-width:768px){
+/* スマホでは完全に消す */
+@media(max-width: 768px){
   .hero-character{
-    width:80px;
-    right:10px;
-    bottom:-10px;
-    opacity:0.6;
+    display: none;
   }
 }
