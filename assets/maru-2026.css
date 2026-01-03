@@ -111,3 +111,26 @@ a{text-decoration:none;color:inherit}
   border-top:1px solid var(--line);
   padding:30px 0;color:var(--muted);font-size:14px
 }
+
+/* character */
+.hero{
+  position:relative;
+}
+
+.hero-character{
+  position:absolute;
+  right:40px;
+  bottom:-20px;
+  width:120px;
+  opacity:0.85;
+  pointer-events:none;
+}
+
+@media(max-width:768px){
+  .hero-character{
+    width:80px;
+    right:10px;
+    bottom:-10px;
+    opacity:0.6;
+  }
+}
